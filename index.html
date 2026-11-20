@@ -47,7 +47,7 @@ const MES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','se
 let S={plan:{},real:{},tasks:[],diary:[],events:[]};
 try{S=Object.assign(S,JSON.parse(localStorage.getItem('agenda')||'{}'))}catch(e){}
 /* ===== Supabase: rellena estas dos constantes (Project Settings > API) ===== */
-const SB_URL='',SB_KEY='';
+const SB_URL='https://uqftsfmixffqpbknkssn.supabase.co',SB_KEY='sb_publishable_xrqOE9ukcMz0zRpTqP1Sjg_4HxVXDp0';
 const sb=(window.supabase&&SB_URL&&SB_KEY)?supabase.createClient(SB_URL,SB_KEY):null;
 let user=null,tm,amsg='',sync='';
 const save=()=>{try{localStorage.setItem('agenda',JSON.stringify(S))}catch(e){}push()};
